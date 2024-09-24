@@ -28,3 +28,22 @@ export default {
 - Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
 - Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
 - Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+
+## How to run API and Frontend
+
+### To run API build docker
+
+```cmd
+  sudo docker build -t flask_app ./flask-docker
+``` 
+### Next you have to run API
+
+```cmd
+  sudo docker run -p 5000:5000 flask_app
+```
+
+### To run frontend use this command:
+
+```cmd
+  pnpm run dev
+```
