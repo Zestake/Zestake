@@ -13,7 +13,10 @@ from routes.login import login_bp
 from routes.register import register_bp
 from data_manager import DataManager
 
+from flask_cors import CORS
+
 app = Flask(__name__)
+CORS(app)  # Allow cross-origin requests
 
 
 def db_connect():
